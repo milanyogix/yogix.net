@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>Yogix</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/public/css/app.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar')%>
+        <section class="w-full  object-contain">
+            <img src="../../../public/img/14.png" alt="">
+        </section>
+        <section class="md:flex h-full">
+            <div class="p-4 md:p-8 md:w-3/5 flex flex-col justify-center items-start">
+                <h1 class="my-color">About Bikram Yoga</h1>
+                <h1 class="text-2xl font-semibold">What Is Bikram Yoga?</h1>
+                <p class="text-slate-500 text-sm my-4">Bikram Yoga is a system of hot yoga, a type of yoga as exercise, devised by Bikram Choudhury and based on the teachings of B. C. Ghosh, that became popular in the early 1970s.
+                </p>
+                <p class="text-slate-500 text-sm my-4">Classes consist of a fixed sequence of 26 postures, practiced in a room heated to 105 °F (41 °C) with a humidity of 40%, intended to replicate the climate of India.
+                </p>
+                <p class="text-slate-500 text-sm my-4">The room is fitted with carpets and the walls are covered in mirrors. The instructor may adjust the students' yoga postures. Choudhury's teaching style was abrasive.
+                </p>
+                <a href="/bikram"> <button class="my-btn">Start Session</button></a>
+            </div>
+            <div class="p-4 md:p-8 md:w-2/5 object-cover flex flex-col justify-center items-center">
+                <img src="../../../public/img/15.png" alt="">
+            </div>
+        </section>
+        <%- include('../partials/footer')%>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="/public/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>Yogix</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/public/mediapipe/controlutil.css" crossorigin="anonymous">
+    <script src="/public/mediapipe/camrautil.js" crossorigin="anonymous"></script>
+    <script src="/public/mediapipe/controlutil.js" crossorigin="anonymous"></script>
+    <script src="/public/mediapipe/drawingutil.js" crossorigin="anonymous"></script>
+    <script src="/public/mediapipe/pose.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/navbar')%>
+        <div class="model-wrapper fixed left-0 top-0 z-50 w-screen h-full flex items-center justify-center">
+            <div class="model-container bg-white text-black text-center p-4">
+                <h4 class="text-xl">Select No of Sets.</h4>
+                <select id="yogacount" class="w-full">
+                    <option selected value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="12">12</option>
+                    <option value="27">27</option>
+                    <option value="54">54</option>
+                    <option value="108">108</option>
+                </select>
+                <h4 class="text-xl">Do you want to save your images?</h4>
+                <select name="" class="w-full" id="storeImg">
+                <option selected value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+                <button class="my-btn mt-3" id="Start">Start</button>
+            </div>
+        </div>
+        <section class="md:flex">
+            <div class="md:w-4/5 my-bg">
+                <div class="video-wrapper relative">
+                    <iframe id="dynVideo" class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Sk6xLk8QL0I?autoplay=1&loop=1&showinfo=0&rel=0&enablejsapi=1%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="md:w-1/5">
+                <div style="display: none;" class="control5">
+                </div>
+                <div class="w-full aspect-square hidden">
+                    <video class="input_video5"></video>
+                </div>
+                <div class="w-full aspect-square">
+                    <canvas class="output5 w-full aspect-square" width="480px" height="480px"></canvas>
+                </div>
+                <div class="p-4 m-4 my-bg1 text-white">
+                    <span class="" id="data1"><i class="fas fa-spinner fa-pulse"></i> Loading...</span>
+                </div>
+                <div class="p-4 m-4 my-bg1 text-white">
+                    <span class="" id="data2"><i class="fas fa-spinner fa-pulse"></i> Loading...</span>
+                </div>
+                <button class="my-btn  ml-4" id="end">End Session</button>
+            </div>
+        </section>
+        <form>
+            <input id="user" type="hidden" name="user" value="<%- User.email %>">
+        </form>
+        <div class="loading">
+            <div class="spinner"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/public/js/app.js"></script>
+        <script src="/public/js/hatha.js"></script>
+</body>
+
+</html>
