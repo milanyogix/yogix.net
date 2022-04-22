@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 var local = "mongodb://localhost:27017/demo1";
 var url = "mongodb://localhost:27017/yogix";
+
 var credencials = {
     authSource: "admin",
     user: "milanyogix",
