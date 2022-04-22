@@ -1,0 +1,50 @@
+.my-btn {
+    background: $primary;
+    border-radius: 50px;
+    padding: 6px 2rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.my-btn:hover {
+    background: $primary-hover;
+}
+
+.my-color {
+    color: $primary;
+}
+
+.my-bg {
+    background: $background;
+}
+
+.my-bg1 {
+    background: $primary;
+}
+
+.alert.show {
+    animation: show_slide 1s ease forwards;
+}
+
+.alert.hide {
+    display: none;
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-10%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
